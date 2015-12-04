@@ -1,0 +1,327 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <title>Zling Puzzle</title>
+        <meta charset="utf-8" />
+        <meta name="author" content="Chyntia Dewi Gunawan" />
+        <meta name="description" content="Zling Puzzle is an enhancement of the traditional sliding puzzle game. Built using HTML5, CSS3, and JavaScript. Used jQuery and Semantic UI frameworks." />
+        <meta name="keywords" content="Game, Puzzle, Sliding, Puzzle, Slide, Swing, HTML5, CSS3, JavaScript, jQuery, Semantic UI" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="asset/image/favicon.ico" type="image/x-icon" />
+        <link href="https://fonts.googleapis.com/css?family=Droid+Sans" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet" type="text/css" />
+        <link rel="stylesheet" href="library/semantic.min.css" />
+        <link rel="stylesheet" href="asset/style/zling.css" />
+    </head>
+    <body>
+        <!-- G A M E   M A I N ==============================================-->
+        <div class="game main">
+            <br />
+            <div class="ui stackable four column grid">            
+                <!-- L E F T ================================================-->
+                <div class="four wide column">
+                    <!-- H E A D E R ========================================-->
+                    <h1 class="ui header">
+                        <i class="puzzle icon dark text"></i>
+                        <span class="content dark text">
+                            Zling Puzzle
+                            <span class="sub header light text">
+                                Slide n Swing Puzzle to The Hole
+                            </span>                        
+                        </span>
+                    </h1> 
+                    <br /><br />
+                    <!-- T O O L ============================================-->
+                    <div class="tool ui one column centered grid">
+                        <button class="replay circular ui inverted blue icon button">
+                            <i class="icon repeat"></i>
+                        </button>
+                        <button class="options trigger circular ui inverted blue icon button">
+                            <i class="icon setting"></i>
+                        </button>
+                        <button class="help trigger circular ui inverted blue icon button">
+                            <i class="icon help"></i>
+                        </button>
+                        <button class="about trigger circular ui inverted blue icon button">
+                            <i class="icon share alternate"></i>
+                        </button>
+                    </div>
+                    <br /><br />
+                    <!-- S C O R E ==========================================-->
+                    <div class="score ui three inverted statistics">
+                        <div class="statistic">
+                            &nbsp;
+                        </div>
+                        <div class="huge inverted blue statistic">
+                            <div class="label dark text">
+                                Score
+                            </div>
+                            <div class="value">
+                                0
+                            </div>
+                        </div>
+                        <div class="statistic">
+                            &nbsp;
+                        </div>
+                    </div>
+                    <br /><br />
+                    <!-- C O N T R O L ======================================-->
+                    <div class="control ui two fluid cards">
+                        <div class="slide card">
+                            <div class="content center aligned">
+                                <span class="count dark text">0</span> 
+                                / 
+                                <span class="maximum light text">0</span>
+                                <div class="active enabled ui fluid button">
+                                    Slide
+                                </div> 
+                            </div>
+                        </div>
+                        <div class="swing card">
+                            <div class="content center aligned">
+                                <span class="count dark text">0</span> 
+                                / 
+                                <span class="maximum light text">0</span> 
+                                <div class="ui fluid button">
+                                    Swing
+                                </div> 
+                            </div>
+                        </div> 
+                    </div>
+                </div>
+                <!-- B O A R D ==============================================-->
+                <div class="eight wide column">
+                    <div class="board">
+                        &nbsp;
+                    </div>
+                </div>
+                <!-- R I G H T ==============================================-->
+                <div class="four wide column">
+                    &nbsp;
+                </div>
+            </div>
+        </div>
+        <!-- G A M E   E N D ================================================-->
+        <div class="game end ui basic small modal">
+            <i class="close icon"></i>
+            <!-- H E A D E R ================================================-->
+            <div class="header">
+                <i class="puzzle icon"></i> 
+                Zling Puzzle
+            </div>
+            <!-- C O N T E N T ==============================================-->
+            <div class="content">
+                <div class="ui inverted center aligned header"> 
+                    <!-- S C O R E ==========================================-->
+                    <div class="score">
+                        <div class="ui three inverted statistics">
+                            <div class="statistic">
+                                &nbsp;
+                            </div>
+                            <div class="huge inverted blue statistic">
+                                <div class="value">
+                                    0
+                                </div>
+                                <div class="label">
+                                    Score
+                                </div>
+                            </div>
+                            <div class="statistic">
+                                &nbsp;
+                            </div>
+                        </div>
+                    </div>
+                    <br />
+                    <!-- T E X T ============================================-->
+                    <div class="sub header">
+                        <span class="complete">
+                            Congratulations on completing Zling Puzzle!
+                        </span>
+                        <span class="over">
+                            Don"t give up, let"s try again!
+                        </span>
+                    </div>
+                    <br />
+                    <!-- S H A R E ==========================================-->
+                    <div class="share">                        
+                        <button class="ui facebook button">
+                            <i class="facebook icon"></i>
+                            Facebook
+                        </button>
+                        <a class="ui twitter button" target="_blank">
+                            <i class="twitter icon"></i>
+                            Twitter
+                        </a>
+                        <div class="ui success message transition hidden">
+                            <i class="close icon"></i>
+                            <div class="header">
+                                Shared via <span class="media"></span>
+                            </div>
+                            <p>
+                                Thank you for sharing Zling Puzzle <i class="smile icon"></i>
+                            </p>
+                        </div>               
+                    </div>
+                </div>
+            </div>
+            <!-- A C T I O N ================================================-->
+            <div class="actions">
+                <div class="replay ui blue button">
+                    <i class="repeat icon"></i> 
+                    Replay
+                </div>
+            </div>
+        </div>
+        <!-- G A M E   M I S C E L L A N E O U S ============================-->
+        <div class="game miscellaneous ui long modal">
+            <i class="close icon"></i>
+            <!-- H E A D E R ================================================-->
+            <div class="header">                
+                <i class="puzzle icon"></i>
+                Zling Puzzle
+            </div>
+            <!-- C O N T E N T ==============================================-->
+            <div class="content">
+                <!-- M E N U ================================================-->
+                <div class="ui pointing secondary menu">
+                    <a class="options item" data-tab="options">
+                        Options
+                    </a>
+                    <a class="help item" data-tab="help">
+                        Help
+                    </a>
+                    <a class="about item" data-tab="about">
+                        About
+                    </a>
+                </div>
+                <!-- O P T I O N S ==========================================-->
+                <div class="ui tab segment" data-tab="options">
+                    <form class="ui form">
+                        <h4 class="ui dividing header">
+                            Dimension
+                        </h4>
+                        <div class="grouped fields">
+                            <div class="field">
+                                <div class="dimension dimension-3 ui radio checkbox" data-dimension="3">
+                                    <input type="radio" name="dimension" tabindex="0" class="hidden"/>
+                                    <label>3 x 3</label>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="dimension dimension-4 ui radio checkbox" data-dimension="4">
+                                    <input type="radio" name="dimension" tabindex="0" class="hidden"/>
+                                    <label>4 x 4</label>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <div class="dimension dimension-5 ui radio checkbox" data-dimension="5">
+                                    <input type="radio" name="dimension" tabindex="0" class="hidden"/>
+                                    <label>5 x 5</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="action">
+                            <div class="save ui blue button right floated">
+                                <i class="save icon"></i> 
+                                Save and Apply
+                            </div>
+                            <div class="cancel ui basic button right floated">
+                                Cancel
+                            </div>
+                            <br />
+                            <br />
+                        </div>
+                    </form>
+                </div>
+                <!-- H E L P ================================================-->
+                <div class="ui tab segment" data-tab="help">
+                    <h4 class="ui dividing header">
+                        How to Play
+                    </h4>
+                    <p>
+                        The goal of the game is to arrange the tiles sequentially. The fewer moves you used, the higher score you will gain.
+                    </p>
+                    <div class="ui bulleted list">
+                        <div class="item">
+                            <div class="header">
+                                Slide Mode
+                            </div>
+                            <p>
+                                Click any tile which located at the top, bottom, left, or right of the hole to slide it into the hole. 
+                            </p>
+                        </div>
+                        <div class="item">
+                            <div class="header">
+                                Swing Mode
+                            </div>
+                            <p>
+                                Click any tile to swing it into the hole. Convenient, isn"t it? But beware, using swing mode will cause you to lose more point than using slide mode. You will also need to slide 10 times to get an additional chance to swing.
+                            </p>
+                        </div>
+                    </div>
+                    <h4 class="ui dividing header">
+                        Score Calculation
+                    </h4>
+                    <p>
+                        The score is dependent to the maximum number of correct tiles in a state, number of slides you"ve used, and number of swings you"ve used. 
+                    </p>
+                    <code>
+                        score = ( 50 x max_correct ) - ( 1 x num_slide ) - ( 5 x num_swing )
+                    </code>
+                </div>
+                <!-- A B O U T ==============================================-->
+                <div class="ui tab segment" data-tab="about">
+                    <h4 class="ui dividing header">
+                        Zling Puzzle
+                    </h4>
+                    <p>
+                        Zling Puzzle is created by Chyntia Dewi Gunawan, inspired by the traditional sliding puzzle game. Built by using HTML5, CSS3, and JavaScript. Special thanks to jQuery and Semantic UI. 
+                    </p>
+                    <p>
+                        Version: 1.0
+                        <br />Published: December 5, 2015
+                    </p>
+                    <div class="ui icon message">
+                        <i class="mail icon"></i>
+                        <div class="content">
+                            <div class="header">
+                                Feedback
+                            </div>
+                            <p>Found a bug? Got an idea? Or just wanted to say hello? Please send your mail to:    
+                                <a href="mailto:chyntiadewi@live.com">
+                                    chyntiadewi@live.com
+                                </a>
+                            </p>
+                        </div>
+                    </div>
+                    <h4 class="ui dividing header">
+                        Share 
+                    </h4>
+                    <div class="share">
+                        <button class="ui facebook button">
+                            <i class="facebook icon"></i>
+                            Facebook
+                        </button>
+                        <a class="ui twitter button" target="_blank">
+                            <i class="twitter icon"></i>
+                            Twitter
+                        </a>
+                        <div class="ui success message transition hidden">
+                            <i class="close icon"></i>
+                            <div class="header">
+                                Shared via <span class="media"></span>
+                            </div>
+                            <p>
+                                Thank you for sharing Zling Puzzle <i class="smile icon"></i>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="library/jquery-1.11.3.min.js"></script>
+        <script src="library/jquery.cookie.min.js"></script>
+        <script src="library/semantic.min.js"></script>
+        <script src="asset/script/zling.js"></script>
+    </body>
+</html>
